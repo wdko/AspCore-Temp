@@ -16,7 +16,7 @@ updates:
     open-pull-requests-limit: 5
 
   # Git submodule updates
-  - package-ecosystem: "git-submodule"
+  - package-ecosystem: "gitsubmodule"
     directory: "/" # location of .gitmodules
     schedule:
       interval: "daily"
