@@ -1,0 +1,36 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  # Docker image updates
+  - package-ecosystem: "docker"
+    directory: "/WebApplication1/WebApplication1" # location of your Dockerfile
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    open-pull-requests-limit: 5
+
+  # Git submodule updates
+  - package-ecosystem: "git-submodule"
+    directory: "/" # location of .gitmodules
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    open-pull-requests-limit: 5
+
+  # NuGet (.csproj or packages.config) dependency updates
+  - package-ecosystem: "nuget"
+    directory: "/WebApplication1/WebApplication1" # or the path to your .csproj if not in root
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    open-pull-requests-limit: 5
