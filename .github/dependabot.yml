@@ -10,7 +10,7 @@ updates:
     directory: "/WebApplication1/WebApplication1" # location of your Dockerfile
     schedule:
       interval: "cron"
-      cronjob: "20 * * * *" # every hour
+      cronjob: "25 10 * * *" 
     commit-message:
       prefix: "deps"
       include: "scope"
@@ -21,7 +21,7 @@ updates:
     directory: "/" # location of .gitmodules
     schedule:
       interval: "cron"
-      cronjob: "20 * * * *" # every hour
+      cronjob: "25 10 * * *" 
     commit-message:
       prefix: "deps"
       include: "scope"
@@ -32,7 +32,7 @@ updates:
     directory: "/WebApplication1/WebApplication1" # or the path to your .csproj if not in root
     schedule:
       interval: "cron"
-      cronjob: "20 * * * *" # every hour
+      cronjob: "25 10 * * *" 
     commit-message:
       prefix: "deps"
       include: "scope"
