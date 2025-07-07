@@ -9,7 +9,8 @@ updates:
   - package-ecosystem: "docker"
     directory: "/WebApplication1/WebApplication1" # location of your Dockerfile
     schedule:
-      interval: "daily"
+      interval: "cron"
+      cronjob: "20 * * * *" # every hour
     commit-message:
       prefix: "deps"
       include: "scope"
@@ -19,7 +20,8 @@ updates:
   - package-ecosystem: "gitsubmodule"
     directory: "/" # location of .gitmodules
     schedule:
-      interval: "daily"
+      interval: "cron"
+      cronjob: "20 * * * *" # every hour
     commit-message:
       prefix: "deps"
       include: "scope"
@@ -29,7 +31,8 @@ updates:
   - package-ecosystem: "nuget"
     directory: "/WebApplication1/WebApplication1" # or the path to your .csproj if not in root
     schedule:
-      interval: "weekly"
+      interval: "cron"
+      cronjob: "20 * * * *" # every hour
     commit-message:
       prefix: "deps"
       include: "scope"
